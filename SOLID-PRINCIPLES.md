@@ -125,4 +125,4 @@ public class Photocopier : IPrinter, IScanner
 * TODO
 
 ### Further Reading
-* *Clean Architecture: A Craftsman's Guide to Software Structure and Design* By **Robert C. Martin** http://amzn.eu/d/7CL3zZu 
+* *Clean Architecture: A Craftsman's Guide to Software Structure and Design* By **Robert C. Martin** http://amzn.eu/d/7CL3zZu

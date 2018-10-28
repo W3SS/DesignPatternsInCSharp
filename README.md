@@ -1,4 +1,4 @@
-# DesignPatternsInCSharp
+# Design Patterns In C#
 ## Overview
 This are my notes on Design Patterns with C# based on the course https://www.udemy.com/design-patterns-csharp-dotnet/
 

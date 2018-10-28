@@ -18,7 +18,7 @@ This are my notes on Design Patterns with C# based on the course https://www.ude
 * TODO
 
 ### Open-Closed Principle
-* TODO
+* Classes should be open for extension and closed for modification
 
 ### Liskov Substitution Principle
 * TODO

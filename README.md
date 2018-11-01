@@ -2,7 +2,7 @@
 ## Overview
 This are my notes on Design Patterns with C# based on the course https://www.udemy.com/design-patterns-csharp-dotnet/
 
-## [The SOLID Design Principles](docs/SOLID-PRINCIPLES.md)
+## [The SOLID Design Principles](docs/SolidPrinciples.md)
 - [Single Responsibility Principle](docs/SOLID-PRINCIPLES.md#single-responsibility-principle)
 - [Open-Closed Principle](docs/SOLID-PRINCIPLES.md#open-closed-principle)
 - [Liskov Substitution Principle](docs/SOLID-PRINCIPLES.md#liskov-substitution-principle)

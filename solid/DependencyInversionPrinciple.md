@@ -5,7 +5,7 @@
 * **High level parts of the system should not depend on low level parts of the system. Instead, both should depend on abstractions** 
 * **Abstractions should not depend on details. Details should depend on abstractions**
 
-Say that we have an *enum Relationship* and a *Class Person* that corresponds to our High Level
+Say that we have an *enum Relationship* and a *Class Person* that corresponds to our *High Level Parts*
 ```csharp
 public enum Relationship
 {
@@ -20,7 +20,7 @@ public class Person
 }
 ```
 
-And the class Relationships that corresponds to our Low Level
+And the class Relationships that corresponds to our *Low Level Parts*
 
 ```csharp
 public class Relationships
@@ -39,7 +39,7 @@ public class Relationships
 }
 ```
 
-So if we wanted to get a **Parent** named **John** we could create a Class **Research** with a constructor like this: 
+If we wanted to search for every relation that contains a **Parent** called **"John"**, we could create an even further *Lower Level Part* that would have a constructor with a **Relationships** object as an argument
 
 ```csharp
 public class Research
@@ -58,31 +58,30 @@ public class Research
 }
 ```
 
-If you declare 3 **Person** objects it will work just fine the way it is
-
 ```csharp
 static void Main(string[] args)
 {
-	var parent = new Person {Name = "John"};
-	var child1 = new Person {Name = "Chris"};
-	var child2 = new Person {Name = "Mary"};
+    var parent = new Person {Name = "John"};
+    var child1 = new Person {Name = "Chris"};
+    var child2 = new Person {Name = "Mary"};
 
-	var relationships = new Relationships();
-	relationships.AddParentAndChild(parent, child1);
-	relationships.AddParentAndChild(parent, child2);
+    var relationships = new Relationships();
+    relationships.AddParentAndChild(parent, child1);
+    relationships.AddParentAndChild(parent, child2);
 
-	new Research(relationships);
+    new Research(relationships);
 }
 ```
 
-However, the problem is that the relationship class cannnot be changed without rewritting some of the code. By using the **Dependency Inversion Principle**, we need to add a intermediary interface in the Relationship class to access high level data. On this particular example is the 
+The way it's build works as it is. However we can refactor using the **Dependency Inversion Principle** in a way that it would use interfaces to communicate between *parts* instead of doing it directly.
 
+Instead of using the public method
 ```csharp
 public List<(Person, Relationship, Person)> Relations => relations;
 ```
 
-in the **Relationships** class.
-Creating an interface
+We should create an interface 
+
 
 ```csharp
 public interface IRelationshipBrowser
@@ -91,9 +90,19 @@ public interface IRelationshipBrowser
 }
 ```
 
-We can implement the interface in the **Relationships** class and remove the public method **Relations**
+Implement the interface in the **Relationships** class and remove the public method **Relations**
 
 ```csharp
+...
+// Remove this method
+public List<(Person, Relationship, Person)> Relations => relations;
+...
+```
+
+And implement the interface method
+
+```csharp
+
 public class Relationships : IRelationshipBrowser
 {
     private List<(Person, Relationship, Person)> relations 

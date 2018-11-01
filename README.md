@@ -2,13 +2,13 @@
 ## Overview
 This are my notes on Design Patterns with C# based on the course https://www.udemy.com/design-patterns-csharp-dotnet/
 
-## [The SOLID Design Principles](docs/SolidPrinciples.md)
-- [Single Responsibility Principle](docs/SOLID-PRINCIPLES.md#single-responsibility-principle)
-- [Open-Closed Principle](docs/SOLID-PRINCIPLES.md#open-closed-principle)
-- [Liskov Substitution Principle](docs/SOLID-PRINCIPLES.md#liskov-substitution-principle)
-- [Interface Segregation Principle](docs/SOLID-PRINCIPLES.md#interface-segregation-principle)
-- [Dependency Inversion Principle](docs/SOLID-PRINCIPLES.md#dependency-inversion-principle)
-- [Further Reading](docs/SOLID-PRINCIPLES.md#further-reading)
+## The SOLID Design Principles
+- [Single Responsibility Principle](docs/solid/SingleResponsibilityPrinciple)
+- [Open-Closed Principle](docs/solid/OpenClosedPrinciple)
+- [Liskov Substitution Principle](docs/solid/LiskovSubstitutionPrinciple)
+- [Interface Segregation Principle](docs/solid/InterfaceSegregationPrinciple)
+- [Dependency Inversion Principle](docs/solid/DependencyInversionPrinciple)
+- [Further Reading](docs/solid/FurtherReading)
 
 ## Builder
 * TODO

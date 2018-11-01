@@ -1,6 +1,8 @@
+# Design Patterns In C#
+## Solid Principles
 ### Interface Segregation Principle
 
-**An interface should be segregated so that nobody that implements an interface has to implement functions which they don't  need**
+*An interface should be segregated so that nobody that implements an interface has to implement functions which they don't  need*
 
 Consider a modern printer with several functions:
 * Printing
